@@ -44,14 +44,15 @@ public function messages()
         'nome.required' => 'O campo nome é obrigatório',
         'nome.max' => 'O campo nome deve conter no máximo 80 caracteres',
         'nome.min' => 'O campo nome deve conter no mínimo 5 caracteres',
-        'nome.unique' => 'O nome já cadastrado no sistema',
+        'nome.unique' => 'O serviço já foi cadastrado no sistema',
         'descricao.max' => 'A descrição deve conter no máximo 200 caracteres',
         'descricao.min' => 'A descrição deve conter no mínimo 10 caracteres',
-        'duracao.numeric' => 'A duração deve ser em minutos. Ex: 60 = 1 hora',
         'duracao.required' => 'A duração é obrigatória',
+        'duracao.numeric' => 'A duração deve ser em minutos. Ex: 60 = 1 hora',
         'preco.decimal' => 'O campo preço deve ser numérico com 2 casas decimais.',
         'preco.required' => 'O preço é obrigatório'
 
     ];
 }
+
 }
