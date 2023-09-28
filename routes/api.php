@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('servico/store',
-[ServicoController::class, 'servico/store']);
+[ServicoController::class, 'store']);
 
 Route::delete('servico/delete/{id}',
 [ServicoController::class, 'excluir']);
