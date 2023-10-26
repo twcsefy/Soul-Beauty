@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Profissional extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'id',
         'nome',
@@ -26,6 +25,6 @@ class Profissional extends Model
         'complemento',
         'password',
         'salario'
-    ]   ;
-}
 
+    ];
+}

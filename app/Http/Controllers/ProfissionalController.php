@@ -194,4 +194,3 @@ if(count($profissionais) > 0){
 ]);
 }
 }
-

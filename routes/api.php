@@ -33,29 +33,29 @@ Route::get('servico/find/descricao/{descricao}',
 [ServicoController::class, 'pesquisarPoDescricao']); 
 
 
-Route::post('clientes/store',
+Route::post('cliente/store',
 [clienteController::class, 'store']);
 
-Route::delete('clientes/delete/{id}',
+Route::delete('cliente/delete/{id}',
 [ClienteControllerController::class, 'excluir']);
 
-Route::put('clientes/update',
+Route::put('cliente/update',
 [ClienteControllerController::class, 'update']);
 
-Route::get('clientes/nome',
+Route::get('cliente/nome',
 [ClienteControllerController::class, 'pesquisarPorNome']);
 
-Route::get('clientes/celular',
+Route::get('cliente/celular',
 [ClienteControllerController::class, 'pesquisarPorCelular']);
 
-Route::get('clientes/cpf',
+Route::get('cliente/cpf',
 [ClienteControllerController::class, 'pesquisarPorCpf']);
 
-Route::get('clientes/email',
+Route::get('cliente/email',
 [ClienteControllerController::class, 'pesquisarPorEmail']);
 
 
-Route::post('proficional/store',
+Route::post('profissional/store',
 [ProfissionalController::class, 'store']);
 
 Route::delete('profissional/delete/{id}',
