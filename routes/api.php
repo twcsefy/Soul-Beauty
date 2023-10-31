@@ -26,33 +26,11 @@ Route::delete('servico/delete/{id}',
 Route::put('servico/update',
 [ServicoController::class, 'update']);
 
-Route::post('servico/nome',
+Route::get('servico/nome',
 [ServicoController::class, 'pesquisarPorNome']);
 
-Route::get('servico/find/descricao/{descricao}',
-[ServicoController::class, 'pesquisarPoDescricao']); 
-
-
-Route::post('cliente/store',
-[clienteController::class, 'store']);
-
-Route::delete('cliente/delete/{id}',
-[ClienteControllerController::class, 'excluir']);
-
-Route::put('cliente/update',
-[ClienteControllerController::class, 'update']);
-
-Route::get('cliente/nome',
-[ClienteControllerController::class, 'pesquisarPorNome']);
-
-Route::get('cliente/celular',
-[ClienteControllerController::class, 'pesquisarPorCelular']);
-
-Route::get('cliente/cpf',
-[ClienteControllerController::class, 'pesquisarPorCpf']);
-
-Route::get('cliente/email',
-[ClienteControllerController::class, 'pesquisarPorEmail']);
+Route::get('servico/find/descricao',
+[ServicoController::class, 'pesquisarPorDescricao']); 
 
 
 Route::post('profissional/store',
@@ -75,3 +53,25 @@ Route::get('profissional/cpf',
 
 Route::get('profissional/email',
 [ProfissionalController::class, 'pesquisarPorEmail']);
+
+
+Route::post('cliente/store',
+[clienteController::class, 'store']);
+
+Route::delete('cliente/delete/{id}',
+[ClienteController::class, 'excluir']);
+
+Route::put('cliente/update',
+[ClienteController::class, 'update']);
+
+Route::get('cliente/nome',
+[ClienteController::class, 'pesquisarPorNome']);
+
+Route::get('cliente/celular',
+[ClienteController::class, 'pesquisarPorCelular']);
+
+Route::get('cliente/cpf',
+[ClienteController::class, 'pesquisarPorCpf']);
+
+Route::get('cliente/email',
+[ClienteController::class, 'pesquisarPorEmail']);

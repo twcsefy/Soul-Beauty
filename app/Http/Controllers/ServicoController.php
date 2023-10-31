@@ -91,8 +91,8 @@ if(count($usuarios) > 0){
     'message' => "Não há resultado para pesquisa"
 ]);
 }
-public function pesquisarPorDescricao($descricao){
-    $usuario = Servico::where('descricao', $descricao)->first();
+public function pesquisarPorDescricao(Request $request){
+    $usuario = Servico::where('descricao', $request->descricao)->first();
     if($usuario == null){
     return response()->json([
         'status'=> true,
