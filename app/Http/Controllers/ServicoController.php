@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServicoRequest;
+use App\Models\Profissional;
 use App\Models\Servico;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -104,4 +105,14 @@ return response()->json([
     'data' => $usuario
     ]);
 }
+
+public function retomarTodos(){
+    $servicos = Servico::all();
+
+    return response()->json([
+        'status' => true,
+        'data' => $servicos
+    ]);
+ 
+} 
 }

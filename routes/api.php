@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfissionalController;
 use App\Http\Controllers\ServicoController;
+use App\Models\Profissional;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,9 @@ Route::get('servico/nome',
 Route::get('servico/find/descricao',
 [ServicoController::class, 'pesquisarPorDescricao']); 
 
+Route::get('servico/retornarTodos',
+[ServicoController::class, 'retornarTodos']);
+
 
 Route::post('profissional/store',
 [ProfissionalController::class, 'store']);
@@ -53,6 +57,10 @@ Route::get('profissional/cpf',
 
 Route::get('profissional/email',
 [ProfissionalController::class, 'pesquisarPorEmail']);
+
+Route::get('profissional/retornarTodos',
+[ProfissionalController::class, 'retornarTodos']);
+
 
 
 Route::post('cliente/store',
