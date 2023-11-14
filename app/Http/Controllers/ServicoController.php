@@ -106,13 +106,30 @@ return response()->json([
     ]);
 }
 
-public function retomarTodos(){
+public function retornarTodos(){
     $servicos = Servico::all();
 
     return response()->json([
         'status' => true,
         'data' => $servicos
     ]);
- 
 } 
+
+public function pesquisarPorId($id){
+    $servico = Servico::find($id);
+
+    if($servico == null){
+        return response()->json([
+            'status' => false,
+            'message' => "Serviço não encontrado"
+        ]);
+    }
+
+    return response()->json([
+        'status'=> true,
+        'data'=> $servico
+    ]);
 }
+}
+
+
