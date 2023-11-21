@@ -28,7 +28,7 @@ Route::delete('servico/delete/{id}',
 Route::put('servico/update',
 [ServicoController::class, 'update']);
 
-Route::post('servico/nome',
+Route::get('servico/nome',
 [ServicoController::class, 'pesquisarPorNome']);
 
 Route::get('servico/find/descricao',
@@ -36,6 +36,9 @@ Route::get('servico/find/descricao',
 
 Route::get('servico/retornarTodos',
 [ServicoController::class, 'retornarTodos']);
+
+Route::get('servico/find/{id}',
+[ServicoController::class, 'pesquisarPorId']);
 
 
 //Profissional
@@ -60,6 +63,12 @@ Route::get('profissional/cpf',
 Route::get('profissional/email',
 [ProfissionalController::class, 'pesquisarPorEmail']);
 
+Route::get('profissional/retornarTodos',
+[ProfissionalController::class, 'retornarTodos']);
+
+Route::get('profissional/find/{id}',
+[ProfissionalController::class, 'pesquisarPorId']);
+
 
 //Cliente
 Route::post('cliente/store',
@@ -82,6 +91,12 @@ Route::get('cliente/cpf',
 
 Route::get('cliente/email',
 [ClienteController::class, 'pesquisarPorEmail']);
+
+Route::get('cliente/retornarTodos',
+[ClienteController::class, 'retornarTodos']);
+
+Route::get('cliente/find/{id}',
+[ClienteController::class, 'pesquisarPorId']);
 
 //Agenda
 Route::post('agenda/store',

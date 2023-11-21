@@ -188,4 +188,30 @@ if(count($usuarios) > 0){
     'message' => "Não há resultado para pesquisa"
 ]);
 }
+
+public function retornarTodos(){
+    $clientes = Cliente::all();
+
+    return response()->json([
+        'status' => true,
+        'data' => $clientes
+    ]);
 }
+
+public function pesquisarPorId($id){
+    $cliente = Cliente::find($id);
+
+    if($cliente == null){
+        return response()->json([
+            'stattus' => false,
+            'message' => "Usuário não encontrado"
+        ]);
+    }
+
+    return response()->json([
+        'status'=> true,
+        'data'=> $cliente
+    ]);
+}
+}
+

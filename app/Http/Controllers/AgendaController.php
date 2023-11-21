@@ -94,7 +94,7 @@ class AgendaController extends Controller
         if (isset($request->data_hora)){
             $agenda->data_hora = $request->data_hora;
         }
-        if (isset($request->pagamento)){
+        if (isset($request->tipo_pagamento)){
             $agenda->tipo_pagamento = $request->tipo_pagamento;
         }
         if (isset($request->valor)){
