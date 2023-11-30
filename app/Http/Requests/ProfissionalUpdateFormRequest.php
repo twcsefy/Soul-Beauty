@@ -24,7 +24,7 @@ class ProfissionalUpdateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => '|max:120|min:5',
+            'nome' => '|max:120|',
                 'celular' => '|max:11|min:10',
                 'email' => '|email|max:120|',
                 'cpf' => '|max:11|min:11|',
